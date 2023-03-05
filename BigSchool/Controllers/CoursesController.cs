@@ -18,7 +18,11 @@ namespace BigSchool.Controllers
 
         public ActionResult Create()
         {
-            return View();
+             var viewModel = new CourseViewModel
+            {
+                Categories = _dbContext.Categories.ToList()
+            }; 
+            return View(viewModel);
         }
     }
 }
