@@ -25,35 +25,6 @@ textarea {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #3833b7cf;
-    border-color: #5935e3;
-}
-.navbar-inverse {
-    background-color: #2536d7;
-    border-color: #2f718b;
-}
-/*Course layout*/
-.course {
-    list-style: none;
-}
-
-.course > li 
-{
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.course > li .date 
-{
-    text-align: center;
-    background-color: #d41d50;
-    color: white;
-    width: 60px;
-    border-radius: 8px;
-}
-
-.course > li .details {
-  position: absolute;
-    top: 0;
-    left: 70px;
+    background-color: #777;
+    border-color: #fff
 }

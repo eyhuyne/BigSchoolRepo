@@ -1,13 +1,9 @@
 ﻿using BigSchool.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
-using System.Linq;
-using Microsoft.AspNet.Identity;
-using System.ComponentModel.DataAnnotations;// required
-using System.Collections.Generic;
 namespace BigSchool.ViewModels
 {
     public class CourseViewModel
@@ -21,10 +17,15 @@ namespace BigSchool.ViewModels
         [ValidTime]
         public string Time { get; set; }
         [Required]
-        public byte Category { get; set; }
+        public byte CategoryId { get; set; }
         public IEnumerable<Category> Categories { get; set; }
-        public DateTime GetDateTime() { 
-            return DateTime.Parse(string.Format("{0} {1}", Date, Time)); 
+        public DateTime GetDateTime()
+        {
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get; set; }
+
     }
 }
